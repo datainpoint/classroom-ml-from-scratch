@@ -12,3 +12,4 @@ dependencies:
     - pyvizml==1.0.2
     - requests==2.26.0
     - scikit-learn==1.0.1
+    - xgboost==1.5
