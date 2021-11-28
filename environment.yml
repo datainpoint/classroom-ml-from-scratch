@@ -65,4 +65,3 @@ dependencies:
     - traitlets==5.1.1
     - urllib3==1.26.7
     - wcwidth==0.2.5
-prefix: /Users/kuoyaojen/opt/miniconda3/envs/mlfromscratch
