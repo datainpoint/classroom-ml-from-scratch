@@ -33,11 +33,11 @@ class TestExercisesThree(unittest.TestCase):
         self.assertTrue(height_meters_sklearn_model[2] > 0)
     def test_06_predict_height_meters_gradient_descent_model(self):
         height_meters_gradient_descent_model = ex.predict_height_meters_gradient_descent_model()
-        self.assertIsInstance(height_meters_sklearn_model, np.ndarray)
-        self.assertEqual(height_meters_sklearn_model.size, 3)
-        self.assertTrue(height_meters_sklearn_model[0] > 0)
-        self.assertTrue(height_meters_sklearn_model[1] < 0)
-        self.assertTrue(height_meters_sklearn_model[2] > 0)
+        self.assertIsInstance(height_meters_gradient_descent_model, np.ndarray)
+        self.assertEqual(height_meters_gradient_descent_model.size, 3)
+        self.assertTrue(height_meters_gradient_descent_model[0] > 0)
+        self.assertTrue(height_meters_gradient_descent_model[1] < 0)
+        self.assertTrue(height_meters_gradient_descent_model[2] > 0)
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestExercisesThree)
 runner = unittest.TextTestRunner(verbosity=2)
