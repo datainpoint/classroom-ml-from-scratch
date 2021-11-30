@@ -20,7 +20,7 @@ class TestExercisesFour(unittest.TestCase):
     def test_04_predict_survived_gradient_descent_model(self):
         survived_gradient_descent_model = ex.predict_survived_gradient_descent_model()
         self.assertIsInstance(survived_gradient_descent_model, np.ndarray)
-        self.assertEqual(survived_gradient_descent_model.size, (4,))
+        self.assertEqual(survived_gradient_descent_model.size, 4)
         self.assertTrue(survived_gradient_descent_model[1] < 0)
         self.assertTrue(survived_gradient_descent_model[2] < 0)
         self.assertTrue(survived_gradient_descent_model[3] < 0)
