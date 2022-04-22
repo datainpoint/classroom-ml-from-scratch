@@ -14656,8 +14656,6 @@ div.jp-OutputPrompt {
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">pyvizml</span> <span class="kn">import</span> <span class="n">NormalEquation</span>
-<span class="kn">from</span> <span class="nn">pyvizml</span> <span class="kn">import</span> <span class="n">GradientDescent</span>
-<span class="kn">from</span> <span class="nn">pyvizml</span> <span class="kn">import</span> <span class="n">AdaGrad</span>
 </pre></div>
 
      </div>
@@ -14754,7 +14752,7 @@ div.jp-OutputPrompt {
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">player_stats</span><span class="p">[</span><span class="s2">&quot;heightMeters&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -14779,7 +14777,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mse_ml</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y_valid</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">y_valid</span><span class="o">.</span><span class="n">size</span>
@@ -14799,7 +14797,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -14991,7 +14989,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">h_sklearn</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
@@ -15008,7 +15006,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">h_sklearn</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span> <span class="c1"># 截距項</span>
@@ -15049,7 +15047,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 預測</span>
@@ -15070,7 +15068,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15089,7 +15087,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 預測</span>
@@ -15110,7 +15108,7 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -15126,6 +15124,17 @@ w^* = (X^{(train)T}X^{(train)})^{-1}X^{(train)T}y^{(train)}
 
 </div>
 
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#%E9%87%8D%E9%BB%9E%E7%B5%B1%E6%95%B4">&#182;</a></h2><ul>
+<li>如何決定 <code>X_train</code> 與 <code>y_train</code> 之間的關聯 $w$：正規方程（Normal equation）</li>
+<li>將 $h(X; w)$ 寫作成向量矩陣相乘形式，為 $w_0$ 補上 $x_0=1$</li>
+<li>求解 $J(w)$ 斜率為零的位置 $\frac{\partial}{\partial w} J(w) = 0$</li>
+<li>正規方程求解 $w^* = (X^TX)^{-1}X^Ty$</li>
+</ul>
+
+</div>
 </div></section></section>
 </div>
 </div>
